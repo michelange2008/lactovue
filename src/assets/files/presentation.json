@@ -1,0 +1,20 @@
+{
+  "pourquoi":
+  {
+    "icon": "lactodouce.svg",
+    "title": "Pourquoi lactodouce ?",
+    "text": "Le développement de la mamelle chez les mammifères, destiné à permettre l’allaitement du petit, est la conséquence d’une gestation. De ce fait, depuis l’invention de l’élevage, toute production de lait a nécessité une gestation préalable. Pourtant, des éleveurs de chèvres ont remarqués que certaines femelles non gestantes sont capables de reprendre une lactation quand les reste du troupeau met bas. Ce phénomène est le signe d’une « synchronisation hormonale » qui a déjà été observée dans d’autres situations."
+  },
+  "fibl":
+  {
+    "icon": "fibl.svg",
+    "title": "Un projet du FiBL France",
+    "text": "Le développement de la mamelle chez les mammifères, destiné à permettre l’allaitement du petit, est la conséquence d’une gestation. De ce fait, depuis l’invention de l’élevage, toute production de lait a nécessité une gestation préalable. Pourtant, des éleveurs de chèvres ont remarqués que certaines femelles non gestantes sont capables de reprendre une lactation quand les reste du troupeau met bas. Ce phénomène est le signe d’une « synchronisation hormonale » qui a déjà été observée dans d’autres situations."
+  },
+  "fondation":
+  {
+    "icon": "fondation.svg",
+    "title": "Soutenu par la fondation XXX",
+    "text": "Le développement de la mamelle chez les mammifères, destiné à permettre l’allaitement du petit, est la conséquence d’une gestation. De ce fait, depuis l’invention de l’élevage, toute production de lait a nécessité une gestation préalable. Pourtant, des éleveurs de chèvres ont remarqués que certaines femelles non gestantes sont capables de reprendre une lactation quand les reste du troupeau met bas. Ce phénomène est le signe d’une « synchronisation hormonale » qui a déjà été observée dans d’autres situations."
+  }
+}

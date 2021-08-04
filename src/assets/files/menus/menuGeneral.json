@@ -1,0 +1,17 @@
+{
+  "lacto": true,
+  "buttons": {
+    "accueil":{
+      "display": true,
+      "route": "Accueil",
+      "title": "Accueil",
+      "mdi": "mdi-home"
+    },
+    "users": {
+      "display": true,
+      "route": "Users",
+      "title": "Eleveurs",
+      "mdi": "mdi-account-multiple"
+    }
+  }
+}
