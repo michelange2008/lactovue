@@ -1,4 +1,5 @@
 import axios from 'axios'
+import route from '../router/index.js'
 
 export default {
   namespaced: true,
@@ -30,7 +31,6 @@ export default {
 
   actions: {
     async signIn ({ dispatch }, credentials) {
-      console.log(credentials);
       await axios.get('/sanctum/csrf-cookie')
       await axios.post('/login', credentials)
       return dispatch('me')
@@ -38,7 +38,7 @@ export default {
 
     async signOut ({ dispatch }) {
       await axios.post('/logout')
-
+      route.push({name: 'Accueil'})
       return dispatch('me')
     },
 

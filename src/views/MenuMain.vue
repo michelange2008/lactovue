@@ -16,6 +16,7 @@
     width="50"
     />
     <v-img
+    v-if="affiche_titre"
     alt="Lactodouce"
     class="shrink mt-1 ml-2 hidden-sm-and-down"
     contain
@@ -39,34 +40,34 @@
   </v-btn>
   </router-link>
   <v-spacer></v-spacer>
-  <v-menu offset-y>
-  <template v-slot:activator="{on, attrs}">
-    <v-btn
-      color="primary"
-      small
-      title="Connexion/Deconnexion"
-      fab
-      v-bind="attrs"
-      v-on="on"
-      >
-      <v-icon>mdi-account-circle</v-icon>
-    </v-btn>
-  </template>
-  <v-list>
-    <v-list-item>
-      <v-list-item-title>
-        <router-link :to="{ name: 'SignIn'}">Se connecter</router-link>
-      </v-list-item-title>
-      <v-list-item-title>
-        <a href="#" @click.prevent="signOut">Se déconnecter</a>
-      </v-list-item-title>
-      <v-list-item-title>
-        Bonjour
-      </v-list-item-title>
-  </v-list-item>
-</v-list>
-</v-menu>
-</v-app-bar>
+
+      <router-link v-if="!authenticated" :to="{ name: 'SignIn'}">
+        <v-btn
+          class="mx-2"
+          fab
+          small
+          color="accent"
+          title="Se connecter"
+        >
+          <v-icon>
+            mdi-account-circle
+          </v-icon>
+        </v-btn>
+      </router-link>
+      <div class="mx-2" v-if="authenticated">
+        {{user.name}}
+      </div>
+      <a v-if="authenticated" href="#" @click.prevent="signOut">
+        <v-btn
+          fab
+          small
+          color="secondary"
+          title="Se déconnecter"
+        >
+        <v-icon>mdi-account-off</v-icon>
+      </v-btn>
+      </a>
+    </v-app-bar>
 </template>
 
 <script>
@@ -79,7 +80,7 @@ export default {
   data() {
     return {
       elevation: 0,
-
+      affiche_titre: false,
     }
   },
   computed: {
@@ -92,8 +93,10 @@ export default {
     onscrollElevation() {
       if(window.scrollY === 0) {
         this.elevation = 0
+        this.affiche_titre = false
       } else {
         this.elevation = 3;
+        (window.scrollY > 300) ? this.affiche_titre = true : this.affiche_titre = false;
         (window.scrollY > 300) ? this.menu.lacto = true: this.menu.lacto = false;
       }
     },
@@ -103,8 +106,6 @@ export default {
 
     async signOut () {
       await this.signOutAction()
-      console.log('coucou');
-      this.$router.replace({ name: 'Accueil' })
     }
 
   },
