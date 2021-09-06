@@ -41,7 +41,7 @@
   </router-link>
   <v-spacer></v-spacer>
 
-      <router-link v-if="!authenticated" :to="{ name: 'SignIn'}">
+      <router-link v-if="!authenticated" :to="{ name: 'Login'}">
         <v-btn
           class="mx-2"
           fab

@@ -58,7 +58,7 @@
   import { mapActions } from 'vuex'
 
   export default {
-    name: 'SignIn',
+    name: 'Login',
     components: {
       'btn-submit': BtnSubmit,
       'menu-main': MenuMain,

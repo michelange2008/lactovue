@@ -46,6 +46,7 @@ export default {
       return axios.get('/api/user').then((response) => {
         commit('SET_AUTHENTICATED', true)
         commit('SET_USER', response.data)
+
       }).catch(() => {
         commit('SET_AUTHENTICATED', false)
         commit('SET_USER', null)

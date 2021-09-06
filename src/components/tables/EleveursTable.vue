@@ -58,9 +58,6 @@ export default {
         user {
           name
           email
-          role {
-            name
-          }
         }
         troupeau {
           effectif
