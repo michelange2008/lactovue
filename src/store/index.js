@@ -6,8 +6,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    eleveurs: {}
   },
   mutations: {
+    listeEleveurs(state, users) {
+      this.eleveurs = users
+    }
   },
   actions: {
   },

@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Accueil from '../views/Accueil.vue'
-import Users from '../views/users/Users.vue'
+import Eleveurs from '../views/users/Eleveurs.vue'
+import Eleveur from '../views/users/Eleveur.vue'
 import Login from '../views/Login.vue'
 import store from '../store/auth.js'
 Vue.use(VueRouter)
@@ -21,8 +22,8 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
     meta: {
-      requireAuth: true,
-      requireAdmin: true,
+      // requireAuth: true,
+      // requireAdmin: true,
     }
   },
   {
@@ -31,12 +32,17 @@ const routes = [
     component: Login
   },
   {
-    path: '/users',
-    name: 'Users',
-    component: Users,
+    path: '/eleveurs',
+    name: 'Eleveurs',
+    component: Eleveurs,
     meta: {
-      requireAuth: true,
+      // requireAuth: true,
     }
+  },
+  {
+    path: '/eleveur/:id',
+    name: 'Eleveur',
+    component: Eleveur
   }
 ]
 

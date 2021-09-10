@@ -25,7 +25,7 @@
       </v-card-text>
 
       <v-card-actions>
-        <router-link :to="{ name: 'Eleveur', params: {id: eleveur.user.id} }">
+        <router-link :to="{ name: 'Eleveur', params: {id: eleveur.id} }">
           <v-btn color="primary">
             <v-icon class="mx-1">mdi-eye</v-icon>Voir
           </v-btn>
@@ -47,6 +47,7 @@ export default {
   apollo: {
     eleveurs: gql `query {
       eleveurs {
+        id
         address_1
         address_2
         cp
@@ -56,6 +57,7 @@ export default {
         long
         installation
         user {
+          id
           name
           email
         }
@@ -70,6 +72,10 @@ export default {
         }
       }
     }`
+  },
+  mounted() {
+
+    this.$store.commit('listeEleveurs', this.eleveurs)
   },
   data() {
     return {

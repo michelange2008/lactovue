@@ -9,7 +9,7 @@
     },
     "users": {
       "display": true,
-      "route": "Users",
+      "route": "Eleveurs",
       "title": "Eleveurs",
       "mdi": "mdi-account-multiple"
     }
